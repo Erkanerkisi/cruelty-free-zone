@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 class Welcome extends StatelessWidget {
 
-
-
   @override
   Widget build(BuildContext context) {
 
     List<PageViewModel> pages = [
       PageViewModel(
-        title: "Save The Animals",
+        title: "Animals",
         body: CrueltyFreeZoneLocalization.of(context).welcomePage1Body,
         image: Center(
           child: Image.asset("assets/images/rabbit3.png", height: 150),
@@ -30,7 +28,7 @@ class Welcome extends StatelessWidget {
         ),
       ),
       PageViewModel(
-        title: "Save The Animals",
+        title: "Save The World",
         body: CrueltyFreeZoneLocalization.of(context).welcomePage3Body,
         image: Center(
           child: Image.asset("assets/images/rabbit3.png", height: 150,),
