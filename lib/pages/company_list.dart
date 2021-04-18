@@ -26,9 +26,7 @@ class _CompanyListState extends State<CompanyList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.test
-            ? "Companies that test on animals"
-            : "Companies that does not test on animals"),
+        title: Text("Companies"),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.search),
