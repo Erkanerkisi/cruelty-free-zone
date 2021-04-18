@@ -8,7 +8,7 @@ class Welcome extends StatelessWidget {
 
     List<PageViewModel> pages = [
       PageViewModel(
-        title: "Animals",
+        title: "Cruelty Free Zone",
         body: CrueltyFreeZoneLocalization.of(context).welcomePage1Body,
         image: Center(
           child: Image.asset("assets/images/rabbit3.png", height: 150),
@@ -28,7 +28,7 @@ class Welcome extends StatelessWidget {
         ),
       ),
       PageViewModel(
-        title: "Save The World",
+        title: "Stop Cruelty",
         body: CrueltyFreeZoneLocalization.of(context).welcomePage3Body,
         image: Center(
           child: Image.asset("assets/images/rabbit3.png", height: 150,),
