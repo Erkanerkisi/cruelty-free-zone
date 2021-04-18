@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "834722607033",
+    "project_id": "crueltyfreezone-80626",
+    "storage_bucket": "crueltyfreezone-80626.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834722607033:android:4fa57c2b2fa9afc18e1068",
+        "android_client_info": {
+          "package_name": "com.ucankus.cruelty_free_zone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834722607033-csp2995luu61aq8l1fkn8hoipka6a5r4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfgeivxPG7WgvtKl9Hs0Bq1knNMFgqWeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834722607033-csp2995luu61aq8l1fkn8hoipka6a5r4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

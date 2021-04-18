@@ -12,13 +12,14 @@ class CompanyList extends StatefulWidget {
 }
 
 class _CompanyListState extends State<CompanyList> {
-  //CompanyRepository _companyRepository;
+  CompanyRepository _companyRepository;
   List<String> data;
 
   @override
   void initState() {
     super.initState();
-    data = new CompanyRepository().data;
+    _companyRepository = new CompanyRepository();
+    data = _companyRepository.data;
   }
 
   @override
@@ -40,11 +41,21 @@ class _CompanyListState extends State<CompanyList> {
         },
       ),
       body: Container(
-        child: ListView.builder(
-          itemCount: data.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text('${data[index]}'),
+        child: FutureBuilder(
+          future: _companyRepository.findList(widget.test),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            return ListView.builder(
+              itemCount: snapshot.data.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text('${snapshot.data[index]}'),
+                );
+              },
             );
           },
         ),
