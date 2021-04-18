@@ -1,4 +1,4 @@
-# cruelty_free_zone
+# Cruelty Free Zone
 
 Bu proje sosyal sorumluluk kapsamında hayvanlar üzerinde deneyler yapan firmaların listesi sunar ve bu listede arama yapma imkanı verir.
 
