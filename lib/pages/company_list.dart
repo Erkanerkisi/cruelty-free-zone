@@ -1,4 +1,5 @@
 import 'package:cruelty_free_zone/core/company_name_search.dart';
+import 'package:cruelty_free_zone/model/Company.dart';
 import 'package:cruelty_free_zone/repository/company_repository.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,6 @@ class _CompanyListState extends State<CompanyList> {
   void initState() {
     super.initState();
     _companyRepository = new CompanyRepository();
-    data = _companyRepository.data;
   }
 
   @override
@@ -41,19 +41,21 @@ class _CompanyListState extends State<CompanyList> {
         },
       ),
       body: Container(
-        child: FutureBuilder(
-          future: _companyRepository.findList(widget.test),
+        child: StreamBuilder(
+          stream: _companyRepository.findList(widget.test),
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
               return Center(
                 child: CircularProgressIndicator(),
               );
             }
+            List<String> list = Company.of(snapshot).map((e) => e.name).toSet().toList();// HAHAHA
+            data = list;
             return ListView.builder(
-              itemCount: snapshot.data.length,
+              itemCount: list.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text('${snapshot.data[index]}'),
+                  title: Text('${list[index]}'),
                 );
               },
             );

@@ -28,11 +28,11 @@ class CompanyRepository {
   final CollectionReference donottest =
       FirebaseFirestore.instance.collection("donottest");
 
-  Future<List<QuerySnapshot>> findList(bool test) {
+  Stream<QuerySnapshot> findList(bool test) {
     if (test) {
-      return dotest.snapshots().toList();
+      return dotest.snapshots();
     } else {
-      return donottest.snapshots().toList();
+      return donottest.snapshots();
     }
   }
 }
